@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <!-- ======= head component ======= -->
+    <header class="header">
+        <div class="header__top">
+            <div class="logo">
+                <h1>LOGO</h1>
+            </div>
+            <div class="header__content">
+                <div class="header__search">
+                    <i class="fa fa-search"></i>
+                    <input class="header__input" type="text">
+                </div>
+                <div class="header__language">
+                    <span class="japanese">JP</span>|
+                    <span class="english">EN</span>
+                </div>
+                <div onclick="clickBurger()" class="header__burgerButton">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="bottom__left">
+                <h2>翻訳・通訳サービス</h2>
+            </div>
+            <div class="bottom__right">
+                <div class="bottom__phonenumber">
+                    <p>00-0000-0000</p>
+                </div>
+                <button class="header__button">お見積り</button>
+            </div>
+        </div>
+        <!-- ======== Burger Menu ======== -->
+        <div class="menu__burger">
+            <div class="burger__content">
+                <h4 class="top__title">トータルソリューションのアルビス </h4>
+                <h3 class="title__menu">MENU</h3>
+            </div>
+            <div class="burger__ul">
+                <div class="burger__top">
+                    <div class="title">
+                        <div class="img__title" id="iconTop">
+                            <img src="./assets/img/icon_top.jpg" alt="top">
+                        </div>
+                        <a href="">
+                            <h4>総合TOP</h4>
+                        </a>
+                    </div>
+                    <ul class="ul__menu">
+                        <li>
+                            <a href="#">アルビスについて</a>
+                        </li>
+                        <li>
+                            <a href="#">会社概要</a>
+                        </li>
+                        <li>
+                            <a href="#">アクセス</a>
+                        </li>
+                        <li>
+                            <a href="#">採用情報</a>
+                        </li>
+                    </ul>
+                    <div class=bot__button>
+                        <button class="button__burger__bot">総合お問い合わせ</button>
+                    </div>
+                </div>
+                <div class="burger__top">
+                    <div class="title">
+                        <div class="img__title" id="iconBook">
+                            <img src="./assets/img/icon_book.jpg" alt="">
+                        </div>
+                        <a href="">
+                            <h4>翻訳・通訳</h4>
+                        </a>
+                    </div>
+                    <ul class="ul__menu">
+                        <li>
+                            <a href="#">翻訳・通訳について</a>
+                        </li>
+                        <li>
+                            <a href="#">取扱言語</a>
+                        </li>
+                        <li>
+                            <a href="#">翻訳取扱分野</a>
+                        </li>
+                        <li>
+                            <a href="#">多言語DTP制作</a>
+                        </li>
+                        <li>
+                            <a href="#">多言語WEBページ制作</a>
+                        </li>
+                        <li>
+                            <a href="#">翻訳支援ツール</a>
+                        </li>
+                    </ul>
+                    <div class=bot__button>
+                        <button class="button__burger__bot">お見積り</button>
+                    </div>
+                </div>
+                <div class="burger__top">
+                    <div class="title">
+                        <div class="img__title" id="iconDog">
+                            <img src="./assets/img/icon_dog.jpg" alt="">
+                        </div>
+                        <a class="" href="">
+                            <h4>動物・医薬コンサルティング</h4>
+                        </a>
+
+                    </div>
+                    <ul class="ul__menu">
+                        <li>
+                            <a href="#">コンサルティングについて</a>
+                        </li>
+                        <li>
+                            <a href="#">製品導入の可能性調査ア</a>
+                        </li>
+                        <li>
+                            <a href="#">承認申請・薬事開発業務</a>
+                        </li>
+                        <li style="width: 120%;">
+                            <a href="#">バイオサイエンス・インダストリーにおけるアシスト</a>
+                        </li>
+                        <li>
+                            <a href="#">動物用医薬品マーケティング</a>
+                        </li>
+                    </ul>
+                    <div class=bot__button>
+                        <button class="button__burger__bot">コンサルティング専用お問い合わせ</button>
+                    </div>
+                </div>
+                <div class="burger__top">
+                    <div class="title">
+                        <div class="img__title" id="iconHuman">
+                            <img src="./assets/img/icon_human.jpg" alt="">
+                        </div>
+                        <a href="">
+                            <h4>人材派遣・紹介</h4>
+                        </a>
+                    </div>
+                    <ul class="ul__menu">
+                        <li>
+                            <a href="#">人材派遣・紹介について</a>
+                        </li>
+                        <li>
+                            <a href="#">募集職種一覧</a>
+                        </li>
+                    </ul>
+                    <div class=bot__button>
+                        <button class="button__burger__bot">お仕事情報はこちら</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ========End Burger menu ========= -->
+    </header>
+    <!-- end header component -->
+    <!-- carousel slider component -->
+    <div class="carousel__slider">
+        <div class="carousel__content">
+            <div class="layer"></div>
+            <img src="./assets/img/bg_background_carousel.jpg" alt="global" />
+            <div class="content__text">
+                <p class="translations">TRANSLATIONS
+                <p>
+                <h3 class="title">翻訳・通訳サービス</h3>
+                <p class="content">
+                    対応可能言語は00ケ国、英語以外の言語もお任せください。</br> 高品質な翻訳をスピーディーに提供致します。
+                </p>
+            </div>
+
+        </div>
+        <div class="carousel__content">
+            <div class="layer"></div>
+            <img src="./assets/img/bg_background_carousel1.jpg" alt="global" />
+            <div class="content__text">
+                <p class="translations">GLOBAL COMMUNICATORS
+                <p>
+                <h3 class="title">言葉で、世界を繋ぐ。</h3>
+            </div>
+        </div>
+    </div>
+    <!-- ======End carousel slider component ====== -->
+    <!-- ===== Banner component ===== -->
+    <div class="banner">
+        <div class="banner__content">
+            <div class="logo__icon div__icon">
+                <div class="icon__content">
+                    <div class="icon">
+                        <span>LOGO</span>
+                    </div>
+                    <p>メニュー</p>
+                </div>
+            </div>
+            <div class="book__icon div__icon">
+                <div class="icon__content">
+                    <div class="icon">
+                        <span><img src="./assets/img/icon_book.jpg" alt=""></span>
+                    </div>
+                    <p>メニュー</p>
+                </div>
+            </div>
+            <div class="dog__icon div__icon">
+                <div class="icon__content">
+                    <div class="icon">
+                        <span><img src="./assets/img/icon_dog.jpg" alt=""></span>
+                    </div>
+                    <p>メニュー</p>
+                </div>
+            </div>
+            <div class="people__icon div__icon">
+                <div class="icon__content">
+                    <div class="icon">
+                        <span><img src="./assets/img/icon_human.jpg"></span>
+                    </div>
+                    <p>メニュー</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ========End Banner Component ======== -->
+    <!-- ========Advantage Component ========= -->
+    <div class="advantage">
+        <div class="advantage__title">
+            <h4>ADVANTAGE</h4>
+            <h5>強み</h5>
+            <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。 </p>
+        </div>
+        <div class="advantage__content">
+            <div class="adv__card">
+                <h5>取引社数</h5>
+                <p class="adv__number"><span>0,000</span>社</p>
+                <p class="adv__content">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+            </div>
+            <div class="adv__card">
+                <h5>取扱言語</h5>
+                <p class="adv__number"><span>00</span>ケ国語</p>
+                <p class="adv__content">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+            </div>
+            <div class="adv__card">
+                <h5>翻訳会社売上</h5>
+                <p class="adv__number">国内<span>00</span>位</p>
+                <p class="adv__content">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+            </div>
+            <div class="adv__card">
+                <h5>顧客満足度</h5>
+                <p class="adv__number"><span>00</span>%以上</p>
+                <p class="adv__content">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+            </div>
+            <div class="adv__card">
+                <h5>専門分野</h5>
+                <p class="adv__number"><span>00</span>種類以上</p>
+                <p class="adv__content">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+                <div class="after"></div>
+            </div>
+        </div>
+        <div class="button__adv">
+            <div class="main__button">
+                <span>〇〇〇〇について</span>
+                <i class="fa fa-angle-right"></i>
+            </div>
+        </div>
+    </div>
+    <!-- ===== End Advantage Component ===== -->
+    <!-- ====== Translation component ====== -->
+    <div class="translation__all">
+        <div class="translation">
+            <div class="translation__content">
+                <div class="translation__left">
+                    <h3>TRANSLATION</h3>
+                    <span>サービス</span>
+                    <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+                    <div class="translation__button">
+                        <span>サービスTOPへ</span>
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>
+                <div class="translation__right">
+                    <img src="./assets/img/img__global.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.carousel__slider').slick({
+            });
+        });
+    </script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
