@@ -11,3 +11,7 @@ const clickLine = function() {
     contact.classList.toggle('show');
     lineRight.classList.toggle('bg__color');
 }
+let closemenu = dom('.close__menu');
+const closeButton = function() {
+    menuBurger.classList.remove('show');
+}

@@ -12,13 +12,14 @@
     <link rel="stylesheet" href="./css/slick.css">
     <link rel="stylesheet" href="./css/slick-theme.css">
     <link rel="stylesheet" href="./css/odometer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
     <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
     <div class="container__all">
         <!-- ======= head component ======= -->
-        <header class="header">
+        <header class="header  animate__bounceIn animate__animated">
             <div class="header__top">
                 <div class="logo">
                     <h1>LOGO</h1>
@@ -50,6 +51,9 @@
             </div>
             <!-- ======== Burger Menu ======== -->
             <div class="menu__burger">
+                <div class="close__menu" onClick="closeButton()">
+                    <i class="fa fa-times"></i>
+                </div>
                 <div class="burger__content">
                     <h4 class="top__title">トータルソリューションのアルビス </h4>
                     <h3 class="title__menu">MENU</h3>
@@ -173,7 +177,7 @@
         </header>
         <!-- end header component -->
         <!-- carousel slider component -->
-        <div class="carousel__slider">
+        <div class="carousel__slider animate__bounceIn animate__animated">
             <div class="carousel__content">
                 <div class="layer"></div>
                 <img src="./assets/img/bg_background_carousel.jpg" alt="global" />
@@ -199,7 +203,7 @@
         </div>
         <!-- ======End carousel slider component ====== -->
         <!-- ===== Banner component ===== -->
-        <div class="banner">
+        <div class="banner animate__flash animate__animated">
             <div class="banner__content">
                 <div class="logo__icon div__icon">
                     <div class="icon__content">
@@ -237,7 +241,7 @@
         </div>
         <!-- ========End Banner Component ======== -->
         <!-- ========Advantage Component ========= -->
-        <div class="advantage">
+        <div class="advantage animate__bounceIn animate__animated">
             <div class="advantage__title">
                 <h4>ADVANTAGE</h4>
                 <h5>強み</h5>
@@ -279,7 +283,7 @@
         </div>
         <!-- ===== End Advantage Component ===== -->
         <!-- ====== Translation Consulting staffing component ====== -->
-        <div class="translation__all tr-co-st-all">
+        <div class="translation__all tr-co-st-all animate__bounceIn animate__animated">
             <div class="translation tr-co-st">
                 <div class="translation__content tr-co-st-content">
                     <div class="translation__left">
@@ -299,7 +303,7 @@
             </div>
             <div class="tr_co_st__layer"></div>
         </div>
-        <div class="consulting__all tr-co-st-all">
+        <div class="consulting__all tr-co-st-all  animate__bounceIn animate__animated">
             <div class="consulting tr-co-st">
                 <div class="consulting__content  tr-co-st-content">
                     <div class="consulting__left">
@@ -319,7 +323,7 @@
             </div>
             <div class="tr_co_st__layer"></div>
         </div>
-        <div class="staffing__all tr-co-st-all">
+        <div class="staffing__all tr-co-st-all  animate__bounceIn animate__animated">
             <div class="staffing tr-co-st">
                 <div class="staffing__content  tr-co-st-content">
                     <div class="staffing__left">
@@ -341,7 +345,7 @@
         </div>
         <!-- ======== End translation consulting staffing component ======== -->
         <!-- ======== Total solution component ======== -->
-        <div class="total__solution">
+        <div class="total__solution animate__bounceIn animate__animated">
             <div class="total__div">
                 <div class="total__solution__content">
                     <div class="content__left">
@@ -356,6 +360,38 @@
                     </div>
                     <div class="content__right">
                         <div class="content__circle">
+                            <div class="arrow__div left">
+                                <div class="arrow__content">
+                                    この文章は ダミーです。
+                                </div>
+                                <div class="arrow">
+                                    <div class="arrow__cirle"></div>
+                                </div>
+                            </div>
+                            <div class="arrow__div right">
+                                <div class="arrow__content right__content">
+                                    この文章は ダミーです。
+                                </div>
+                                <div class="arrow">
+                                    <div class="arrow__cirle"></div>
+                                </div>
+                            </div>
+                            <div class="arrow__div bot__left">
+                                <div class="arrow__content">
+                                    この文章は ダミーです。
+                                </div>
+                                <div class="arrow">
+                                    <div class="arrow__cirle"></div>
+                                </div>
+                            </div>
+                            <div class="arrow__div bot__right">
+                                <div class="arrow__content">
+                                    この文章は ダミーです。
+                                </div>
+                                <div class="arrow">
+                                    <div class="arrow__cirle"></div>
+                                </div>
+                            </div>
                             <div class="circle__blue">
                                 <div class="horizon"></div>
                                 <div class="vertical"></div>
@@ -374,7 +410,7 @@
         </div>
         <!-- ======== End Total solution component ======== -->
         <!-- ========== client component ========== -->
-        <div class="clients">
+        <div class="clients animate__bounceIn animate__animated">
             <p class='client__title'>
                 CLIENTS
             </p>
@@ -390,7 +426,7 @@
         </div>
         <!-- ========== end client component ========== -->
         <!-- ========== banner bottom component ========== -->
-        <div class="banner banner__bottom">
+        <div class="banner banner__bottom animate__bounceIn animate__animated">
             <div class="banner__content">
                 <div class="logo__icon div__icon logo__bottom">
                     <div class="icon__content">
@@ -428,7 +464,7 @@
         </div>
         <!-- ========= end banner bottom component ========== -->
         <!-- ========== information component ========== -->
-        <div class="information">
+        <div class="information animate__bounceIn animate__animated">
             <div class="information__content">
                 <div class="info__item"></div>
                 <div class="info__item">
@@ -441,7 +477,7 @@
         </div>
         <!-- ========== end information component ========== -->
         <!-- ========== line info component ========== -->
-        <div class="line__info">
+        <div class="line__info animate__bounceIn animate__animated">
             <div class="line__content">
                 <div class="left">
                     <p>お知らせ ｜ </p>
@@ -557,10 +593,10 @@
                 </div>
                 <div class="footer__info">
                     <div class="content">
-                        <span class="face__note"> 
+                        <span class="face__note">
                             この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
                         </span>
-                        <span><i class="fab fa-facebook-f"></i></span>
+                        <span class="face__icon"><i class="fab fa-facebook-f"></i></span>
                     </div>
                 </div>
             </div>
