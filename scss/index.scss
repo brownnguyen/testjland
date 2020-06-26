@@ -1,4 +1,5 @@
 @import "./Variable.scss";
+@import "./Mixin.scss";
 html,
 body {
     width: 100%;
@@ -8,23 +9,35 @@ body {
     scroll-behavior: smooth;
     font-family: "游ゴシック, Yu Gothic, Hiragino Kaku Gothic ProN, Hiragino Kaku, Gothic Pro, メイリオ, ＭＳ ゴシック, sans-serif";
 }
-@keyframes drop {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
+// @keyframes drop {
+//     from {
+//         transform: translateY(-100%) translateX(-50%);
+//     }
+//     to {
+//         transform: translateY(0) translateX(-50%);
+//     }
+// }
+// @keyframes dropout {
+//     from {
+//         transform: translateY(0) translateX(-50%);
+//     }
+//     to {
+//         transform: translateY(-100%) translateX(-50%);
+//     }
+// }
 .bg__color {
     background: white !important;
     color: $blue !important;
 }
 .show {
-    animation: drop 0.5s forwards;
-    -webkit-animation: drop 0.5s forwards;
+    // animation: drop .5s ease-in-out;
     display: block !important;
     opacity: 1 !important;
+}
+.hide {
+    // animation: dropout 0.5s ease-in-out;
+    display: block !important;
+    opacity: 0 !important;
 }
 a {
     color: white;
@@ -65,6 +78,7 @@ h5 {
             cursor: pointer;
             background-color: white;
             display: flex;
+            -ms-flex-align: center;
             justify-content: space-between;
             height: 100px;
             width: 100%;
@@ -106,9 +120,10 @@ h5 {
                 }
                 .header__language {
                     margin: auto;
+                    -ms-flex-align: center;
                     font-size: 14px;
                     .japanese {
-                        color: #1880b6;
+                        color: rgb(24, 129, 185);
                     }
                     span {
                         margin-right: 5px;
@@ -135,9 +150,10 @@ h5 {
         }
         .header__bottom {
             width: 100%;
-            background-color: #378d70ec;
+            background-color: rgba(55, 141, 112, 0.925);
             height: 80px;
             display: flex;
+            -ms-flex-align: center;
             justify-content: space-between;
             margin: 0 auto;
             .bottom__left {
@@ -186,6 +202,24 @@ h5 {
             }
         }
     }
+    @include CSSIE {
+        .header {
+            .header__top {
+                .header__content {
+                    .header__language {
+                        margin-top: 10px;
+                    }
+                }
+            }
+            .header__bottom{
+                .bottom__right{
+                    .bottom__phonenumber{
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
     .carousel__slider {
         max-width: 100%;
         overflow: hidden;
@@ -206,19 +240,19 @@ h5 {
                 color: white;
                 .translations {
                     font-size: 36px;
-                    margin-bottom: 30px;
                     letter-spacing: 4px;
-                    font-family: 'Oswald', sans-serif;
+                    font-family: "Oswald", sans-serif;
                 }
                 .title {
                     font-size: 62px;
-                    margin-bottom: 50px;
+                    margin-bottom: 20px;
                     font-weight: bold;
                 }
                 .content {
                     letter-spacing: 3px;
                     font-size: 20px;
-                    font-family: 'Oswald', sans-serif;
+                    font-family: "Oswald", sans-serif;
+                    font-weight: bold;
                 }
             }
             .layer {
@@ -246,23 +280,39 @@ h5 {
             }
         }
     }
+    @include CSSIE {
+        .slick-next {
+            right: -5%;
+            width: 50px;
+            height: 60px;
+        }
+        .slick-prev {
+            left: -5%;
+            width: 50px;
+            height: 60px;
+        }
+    }
     .banner {
         width: 100%;
         margin: 0 auto;
         .banner__content {
             display: flex;
-            height: 140px;
+            -ms-flex-align: center;
+            height: 120px;
             .logo__icon {
                 width: 25%;
                 background-color: $blue;
                 height: 100%;
-                .icon {
-                    border: 2px solid $blue;
-                    font-weight: bold;
-                    font-size: 26px;
-                }
-                p {
-                    font-size: 20px;
+                .icon__content {
+                    -ms-flex-align: center;
+                    .icon {
+                        border: 2px solid $blue;
+                        font-weight: bold;
+                        font-size: 26px;
+                    }
+                    p {
+                        font-size: 20px;
+                    }
                 }
             }
             .book__icon {
@@ -319,7 +369,9 @@ h5 {
             .div__icon {
                 position: relative;
                 display: flex;
+                align-items: center;
                 justify-content: center;
+                -ms-flex-align: center;
                 .icon__content {
                     position: absolute;
                     top: -25px;
@@ -346,11 +398,25 @@ h5 {
                     p {
                         color: white;
                         font-weight: bold;
+                        font-size: 20px;
                     }
                 }
             }
         }
     }
+    @include CSSIE {
+        .banner {
+            .banner__content {
+                .div__icon {
+                    .icon__content {
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
+
     .menu__burger {
         width: 100%;
         display: none;
@@ -359,6 +425,7 @@ h5 {
         z-index: 100;
         top: 0;
         left: 50%;
+        transition: all 0.5s;
         transform: translateX(-50%);
         -webkit-transform: translateX(-50%);
         -moz-transform: translateX(-50%);
@@ -476,12 +543,12 @@ h5 {
             text-align: center;
             padding-top: 80px;
             padding-bottom: 40px;
-            h4 {
+            span {
                 font-size: 12px;
                 color: $blue;
-                font-family: 'Oswald', sans-serif;
+                font-family: "Oswald", sans-serif;
             }
-            h5 {
+            h2 {
                 font-size: 26px;
                 font-weight: bold;
             }
@@ -489,7 +556,6 @@ h5 {
                 font-size: 33px;
                 display: inline-block;
                 width: 50%;
-                font-weight: bold;
                 margin-top: 50px;
             }
         }
@@ -511,6 +577,7 @@ h5 {
                     font-size: 18px;
                     font-weight: bold;
                     margin-top: 40px;
+                    margin-bottom: 15px;
                     &:after {
                         content: "";
                         display: block;
@@ -613,12 +680,12 @@ h5 {
                 .staffing__left {
                     width: 90%;
                     margin-left: 20px;
-                    h3 {
+                    span {
                         font-size: 58px;
                         margin-top: 35px;
-                        font-family: 'Oswald', sans-serif;
+                        font-family: "Oswald", sans-serif;
                     }
-                    span {
+                    h3 {
                         margin-top: 15px;
                         font-size: 26px;
                         font-weight: bold;
@@ -638,7 +705,7 @@ h5 {
                         justify-content: space-between;
                         align-items: center;
                         padding: 0 20px;
-                        background-color: $blue;
+                        background-color: $blue-1;
                         color: white;
                         border: 2px solid white;
                         transition: all 0.5s;
@@ -696,13 +763,14 @@ h5 {
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #1880b6de;
+            background-color: rgba(24, 128, 182, 0.871);
         }
     }
     .total__solution {
         width: 100%;
         background-color: #ddecf4;
         margin: auto;
+        padding: 30px 0;
         .total__div {
             display: flex;
             align-items: center;
@@ -715,7 +783,7 @@ h5 {
                 align-items: center;
                 margin: auto;
                 .content__left {
-                    width: 540px;
+                    width: 510px;
                     display: flex;
                     align-items: center;
                     .left {
@@ -723,21 +791,21 @@ h5 {
                             color: $blue;
                             font-size: 12px;
                             margin-bottom: 10px;
-                            font-family: 'Oswald', sans-serif;
+                            font-family: "Oswald", sans-serif;
                         }
-                        h4 {
+                        h2 {
                             font-size: 26px;
                             font-weight: bold;
                             margin-bottom: 50px;
                         }
-                        h5 {
+                        p {
                             margin-bottom: 40px;
-                            font-size: 20px;
+                            font-size: 22px;
                             letter-spacing: 4px;
                         }
-                        span {
+                        .p__content {
                             letter-spacing: 3px;
-                            font-size: 22px;
+                            font-size: 16px;
                             line-height: 25px;
                         }
                     }
@@ -839,7 +907,7 @@ h5 {
                                 right: 10%;
                                 width: 97px;
                                 height: 42px;
-                                border-left: 5px     solid #0b4e71;
+                                border-left: 5px solid #0b4e71;
                                 border-bottom: 2px solid #0b4e71;
                                 transform: skew(-120deg);
                                 padding-right: 20px;
@@ -917,7 +985,7 @@ h5 {
                                     color: $blue;
                                     span {
                                         font-size: 44px;
-                                        font-family: 'Oswald', sans-serif;
+                                        font-family: "Oswald", sans-serif;
                                     }
                                 }
                                 .bot {
@@ -933,16 +1001,32 @@ h5 {
             }
         }
     }
+    @include CSSIE {
+        .total__solution {
+            .total__solution__content {
+                .content__circle {
+                    .circle__blue {
+                        .circle__white {
+                            .content__circle__white {
+                                transform: translateX(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     .clients {
         width: 60%;
         margin: 0 auto;
+        margin-top: 60px;
         .client__title {
             margin-top: 60px;
             color: $blue;
             font-size: 12px;
-            font-family: 'Oswald', sans-serif;
+            font-family: "Oswald", sans-serif;
         }
-        h3 {
+        h2 {
             color: black;
             margin-top: 20px;
             margin-bottom: 35px;
@@ -1019,8 +1103,9 @@ h5 {
                 font-weight: bold;
             }
             .center {
-                width: 840px;
                 overflow: hidden;
+                font-size: 14px;
+                text-align: center;
             }
             .right {
                 cursor: pointer;
@@ -1028,6 +1113,8 @@ h5 {
                 display: flex;
                 justify-content: space-around;
                 color: $blue;
+                font-weight: bold;
+                font-size: 14px;
                 .right__icon {
                     margin: auto 0;
                 }
@@ -1061,13 +1148,13 @@ h5 {
                     h5 {
                         font-size: 20px;
                     }
-                    p{
+                    p {
                         font-size: 14px;
                     }
                     .span__end__contact {
                         color: $blue;
                         font-weight: bold;
-                        margin-bottom: 20px;
+                        margin-bottom: 8px;
                         font-size: 14px;
                     }
                     .button__end {
@@ -1092,16 +1179,18 @@ h5 {
                 .ul__main {
                     width: 100%;
                     padding-right: 20px;
-                    margin-top: 80px;
+                    margin-top: 60px;
                     h4 {
                         border-bottom: 2px solid $blue;
                         padding-bottom: 10px;
+                        color: $blue;
                     }
                     ul {
                         list-style: none;
                         padding-left: 0;
-                        li{
+                        li {
                             font-size: 14px;
+                            padding: 5px 0;
                         }
                     }
                 }
@@ -1119,6 +1208,7 @@ h5 {
             display: flex;
             justify-content: flex-start;
             margin: auto;
+            -ms-flex-align: center;
             .line__bottom__content {
                 margin: auto 10px;
             }
@@ -1157,9 +1247,9 @@ h5 {
                     -moz-border-radius: 50%;
                     -ms-border-radius: 50%;
                     -o-border-radius: 50%;
-                    background-color: #3b5998;
+                    background-color: rgb(59, 89, 152);
                 }
-                .face__note{
+                .face__note {
                     font-size: 12px;
                 }
             }
@@ -1183,21 +1273,32 @@ h5 {
     }
 }
 .backToTop {
+    .toTopContent {
+        width: 40px;
+        height: 40px;
+        line-height: 28px;
+        border-radius: 50%;
+        text-align: center;
+        display: flex;
+        -ms-flex-align: center;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(45deg, #00b5b7, #0049b7);
+    }
     cursor: pointer;
     position: fixed;
     bottom: 2%;
     right: 2%;
     a {
         opacity: 0.8;
-        color: black;
+        color: white;
         i {
             font-size: 30px;
         }
     }
-    transform: rotate(-45deg);
     transition: all 0.5s;
     &:hover {
-        transform: rotate(315deg);
+        transform: rotate(360deg);
         a {
             opacity: 1;
             color: $dark-blue;
