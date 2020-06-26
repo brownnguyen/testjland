@@ -1,20 +1,20 @@
 setTimeout(function () {
-    odometer.innerHTML = 4567;
+    odometer.innerHTML = 8888;
 }, 1000);
 setTimeout(function () {
-    odometer1.innerHTML = 60;
+    odometer1.innerHTML = 88;
 }, 1500);
 setTimeout(function () {
-    odometer2.innerHTML = 70;
+    odometer2.innerHTML = 88;
 }, 2000);
 setTimeout(function () {
-    odometer3.innerHTML = 80;
+    odometer3.innerHTML = 88;
 }, 2500);
 setTimeout(function () {
-    odometer4.innerHTML = 90;
+    odometer4.innerHTML = 88;
 }, 3000);
 setTimeout(function () {
-    odometer7.innerHTML = 90;
+    odometer7.innerHTML = 88;
 }, 3500);
 (function () {
     var COUNT_FRAMERATE, COUNT_MS_PER_FRAME, DIGIT_FORMAT, DIGIT_HTML, DIGIT_SPEEDBOOST, DURATION, FORMAT_MARK_HTML, FORMAT_PARSER, FRAMERATE, FRAMES_PER_VALUE, MS_PER_FRAME, MutationObserver, Odometer, RIBBON_HTML, TRANSITION_END_EVENTS, TRANSITION_SUPPORT, VALUE_HTML, addClass, createFromHTML, fractionalPart, now, removeClass, requestAnimationFrame, round, transitionCheckStyles, trigger, truncate, wrapJQuery, _jQueryWrapped, _old, _ref, _ref1,
