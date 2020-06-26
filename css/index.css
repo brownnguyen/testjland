@@ -482,6 +482,7 @@ h5 {
             display: block;
             width: 50%;
             margin: 0 auto;
+            margin-top: -3px;
             -webkit-box-shadow: 1px 0px 2px 4px #ddecf4;
                     box-shadow: 1px 0px 2px 4px #ddecf4; }
         .container__all .advantage .advantage__content .adv__card .adv__number {

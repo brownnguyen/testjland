@@ -9,33 +9,15 @@ body {
     scroll-behavior: smooth;
     font-family: "游ゴシック, Yu Gothic, Hiragino Kaku Gothic ProN, Hiragino Kaku, Gothic Pro, メイリオ, ＭＳ ゴシック, sans-serif";
 }
-// @keyframes drop {
-//     from {
-//         transform: translateY(-100%) translateX(-50%);
-//     }
-//     to {
-//         transform: translateY(0) translateX(-50%);
-//     }
-// }
-// @keyframes dropout {
-//     from {
-//         transform: translateY(0) translateX(-50%);
-//     }
-//     to {
-//         transform: translateY(-100%) translateX(-50%);
-//     }
-// }
 .bg__color {
     background: white !important;
     color: $blue !important;
 }
 .show {
-    // animation: drop .5s ease-in-out;
     display: block !important;
     opacity: 1 !important;
 }
 .hide {
-    // animation: dropout 0.5s ease-in-out;
     display: block !important;
     opacity: 0 !important;
 }
@@ -583,6 +565,7 @@ h5 {
                         display: block;
                         width: 50%;
                         margin: 0 auto;
+                        margin-top: -3px;
                         box-shadow: 1px 0px 2px 4px #ddecf4;
                     }
                 }
@@ -590,6 +573,7 @@ h5 {
                     font-weight: bold;
                     font-size: 24px;
                     color: $blue;
+                    ;
                     span {
                         font-size: 50px;
                     }
