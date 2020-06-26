@@ -1,21 +1,29 @@
 setTimeout(function () {
-    odometer.innerHTML = 8888;
-}, 1000);
-setTimeout(function () {
-    odometer1.innerHTML = 88;
-}, 1500);
-setTimeout(function () {
-    odometer2.innerHTML = 88;
-}, 2000);
-setTimeout(function () {
-    odometer3.innerHTML = 88;
-}, 2500);
-setTimeout(function () {
-    odometer4.innerHTML = 88;
-}, 3000);
-setTimeout(function () {
-    odometer7.innerHTML = 88;
+
 }, 3500);
+window.addEventListener("scroll", function (event) {
+    var top = this.scrollY;
+    console.log(top);
+    if (top > 800) {
+        odometer.innerHTML = 8888;
+        setTimeout(function () {
+            odometer1.innerHTML = 88;
+        }, 200);
+        setTimeout(function () {
+            odometer2.innerHTML = 88;
+        }, 500);
+        setTimeout(function () {
+            odometer3.innerHTML = 88;
+        }, 1000);
+        setTimeout(function () {
+            odometer4.innerHTML = 88;
+        }, 1200);
+    }
+    if (top > 2900) {
+        odometer7.innerHTML = 88;
+    }
+}, false);
+
 (function () {
     var COUNT_FRAMERATE, COUNT_MS_PER_FRAME, DIGIT_FORMAT, DIGIT_HTML, DIGIT_SPEEDBOOST, DURATION, FORMAT_MARK_HTML, FORMAT_PARSER, FRAMERATE, FRAMES_PER_VALUE, MS_PER_FRAME, MutationObserver, Odometer, RIBBON_HTML, TRANSITION_END_EVENTS, TRANSITION_SUPPORT, VALUE_HTML, addClass, createFromHTML, fractionalPart, now, removeClass, requestAnimationFrame, round, transitionCheckStyles, trigger, truncate, wrapJQuery, _jQueryWrapped, _old, _ref, _ref1,
         __slice = [].slice;
@@ -34,7 +42,7 @@ setTimeout(function () {
 
     FRAMERATE = 30;
 
-    DURATION = 2000;
+    DURATION = 3000;
 
     COUNT_FRAMERATE = 20;
 

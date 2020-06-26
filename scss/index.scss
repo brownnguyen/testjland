@@ -72,6 +72,10 @@ h5 {
                 padding: 0 60px;
                 margin: auto 0;
                 transition: all 0.5s;
+                a {
+                    font-size: 36px;
+                    color: black;
+                }
                 &:hover {
                     color: $dark-blue;
                 }
@@ -102,6 +106,7 @@ h5 {
                 }
                 .header__language {
                     margin: auto;
+                    font-size: 14px;
                     .japanese {
                         color: #1880b6;
                     }
@@ -149,8 +154,9 @@ h5 {
                     margin: auto 0;
                     p {
                         color: white;
-                        font-size: 25px;
+                        font-size: 20px;
                         margin-bottom: 0;
+                        letter-spacing: 4px;
                     }
                 }
                 .header__button {
@@ -160,6 +166,7 @@ h5 {
                     border-color: transparent;
                     background-color: white;
                     font-weight: bold;
+                    font-size: 14px;
                     &:focus {
                         outline: none;
                     }
@@ -198,18 +205,20 @@ h5 {
                 transform: translateX(-50%);
                 color: white;
                 .translations {
-                    font-size: 40px;
+                    font-size: 36px;
                     margin-bottom: 30px;
                     letter-spacing: 4px;
+                    font-family: 'Oswald', sans-serif;
                 }
                 .title {
-                    font-size: 70px;
+                    font-size: 62px;
                     margin-bottom: 50px;
                     font-weight: bold;
                 }
                 .content {
                     letter-spacing: 3px;
                     font-size: 20px;
+                    font-family: 'Oswald', sans-serif;
                 }
             }
             .layer {
@@ -250,6 +259,9 @@ h5 {
                 .icon {
                     border: 2px solid $blue;
                     font-weight: bold;
+                    font-size: 26px;
+                }
+                p {
                     font-size: 20px;
                 }
             }
@@ -467,6 +479,7 @@ h5 {
             h4 {
                 font-size: 12px;
                 color: $blue;
+                font-family: 'Oswald', sans-serif;
             }
             h5 {
                 font-size: 26px;
@@ -603,6 +616,7 @@ h5 {
                     h3 {
                         font-size: 58px;
                         margin-top: 35px;
+                        font-family: 'Oswald', sans-serif;
                     }
                     span {
                         margin-top: 15px;
@@ -707,21 +721,23 @@ h5 {
                     .left {
                         .title {
                             color: $blue;
-                            font-size: 14px;
+                            font-size: 12px;
                             margin-bottom: 10px;
+                            font-family: 'Oswald', sans-serif;
                         }
                         h4 {
-                            font-size: 25px;
+                            font-size: 26px;
                             font-weight: bold;
                             margin-bottom: 50px;
                         }
                         h5 {
                             margin-bottom: 40px;
                             font-size: 20px;
+                            letter-spacing: 4px;
                         }
                         span {
                             letter-spacing: 3px;
-                            font-size: 18px;
+                            font-size: 22px;
                             line-height: 25px;
                         }
                     }
@@ -737,6 +753,7 @@ h5 {
                             z-index: 2;
                             .arrow__content {
                                 width: 96px;
+                                font-weight: bold;
                             }
                             .right__content {
                                 margin-right: 0;
@@ -747,7 +764,7 @@ h5 {
                             .arrow {
                                 width: 97px;
                                 height: 42px;
-                                border-right: 3px solid #0b4e71;
+                                border-right: 5px solid #0b4e71;
                                 border-top: 2px solid #0b4e71;
                                 transform: skew(63deg);
                                 padding-left: 20px;
@@ -772,7 +789,7 @@ h5 {
                                 right: 10%;
                                 width: 97px;
                                 height: 42px;
-                                border-left: 3px solid #0b4e71;
+                                border-left: 5px solid #0b4e71;
                                 border-top: 2px solid #0b4e71;
                                 transform: skew(-60deg);
                                 padding-left: 20px;
@@ -796,7 +813,7 @@ h5 {
                                 bottom: 0;
                                 width: 97px;
                                 height: 42px;
-                                border-right: 3px solid #0b4e71;
+                                border-right: 5px solid #0b4e71;
                                 border-bottom: 2px solid #0b4e71;
                                 transform: skew(-60deg);
                                 padding-left: 20px;
@@ -822,7 +839,7 @@ h5 {
                                 right: 10%;
                                 width: 97px;
                                 height: 42px;
-                                border-left: 3px solid #0b4e71;
+                                border-left: 5px     solid #0b4e71;
                                 border-bottom: 2px solid #0b4e71;
                                 transform: skew(-120deg);
                                 padding-right: 20px;
@@ -899,12 +916,15 @@ h5 {
                                 h3 {
                                     color: $blue;
                                     span {
-                                        font-size: 40px;
+                                        font-size: 44px;
+                                        font-family: 'Oswald', sans-serif;
                                     }
                                 }
                                 .bot {
-                                    font-size: 30px;
+                                    font-size: 26px;
                                     color: $blue;
+                                    font-weight: bold;
+                                    letter-spacing: 4px;
                                 }
                             }
                         }
@@ -920,6 +940,7 @@ h5 {
             margin-top: 60px;
             color: $blue;
             font-size: 12px;
+            font-family: 'Oswald', sans-serif;
         }
         h3 {
             color: black;
@@ -937,12 +958,17 @@ h5 {
             .slick-arrow {
                 &:before {
                     color: black !important;
+                    font-size: 30px;
                 }
             }
             .slick-slide.slick-active {
                 height: 50px;
                 background-color: #b4b4b4;
                 margin: 0 10px;
+            }
+            .slick-next,
+            .slick-prev {
+                height: unset;
             }
         }
     }
@@ -1030,15 +1056,19 @@ h5 {
                         margin-bottom: 15px;
                         color: white;
                         font-weight: bold;
+                        font-size: 14px;
                     }
                     h5 {
-                        font-size: 25px;
+                        font-size: 20px;
+                    }
+                    p{
+                        font-size: 14px;
                     }
                     .span__end__contact {
                         color: $blue;
                         font-weight: bold;
                         margin-bottom: 20px;
-                        font-size: 12px;
+                        font-size: 14px;
                     }
                     .button__end {
                         cursor: pointer;
@@ -1053,7 +1083,7 @@ h5 {
                         -o-border-radius: 0;
                         border-color: transparent;
                         color: white;
-                        font-size: 18px;
+                        font-size: 16px;
                         &:focus {
                             outline: none;
                         }
@@ -1070,6 +1100,9 @@ h5 {
                     ul {
                         list-style: none;
                         padding-left: 0;
+                        li{
+                            font-size: 14px;
+                        }
                     }
                 }
             }
@@ -1096,7 +1129,6 @@ h5 {
         width: 100%;
         margin: 0 auto;
         .footer__logo {
-            
             display: flex;
             justify-content: space-between;
             width: 70%;
@@ -1105,9 +1137,9 @@ h5 {
             align-items: center;
             .logo {
                 cursor: pointer;
-                font-size: 25px;
-                transition: all .5s;
-                &:hover{
+                font-size: 26px;
+                transition: all 0.5s;
+                &:hover {
                     opacity: 0.8;
                 }
             }
@@ -1127,6 +1159,9 @@ h5 {
                     -o-border-radius: 50%;
                     background-color: #3b5998;
                 }
+                .face__note{
+                    font-size: 12px;
+                }
             }
         }
         .footer__bottom {
@@ -1140,7 +1175,7 @@ h5 {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                p{
+                p {
                     font-size: 10px;
                 }
             }
