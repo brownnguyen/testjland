@@ -1,3 +1,4 @@
+
 var dom = function (selector) {
     return document.querySelector(selector);
 }
@@ -15,24 +16,44 @@ var closemenu = dom('.close__menu');
 const closeButton = function () {
     menuBurger.classList.remove('show');
 }
-window.addEventListener("scroll", function (event) {
-    var top = this.scrollY;
-    if (top > 600) {
+let topHeader = dom(".header__top");
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 60) {
+        topHeader.classList.add("fixedTop")
+    }
+    else {
+        topHeader.classList.remove("fixedTop")
+    }
+})
+window.onscroll = function () {
+    let stick0 = dom('.adv__card:nth-child(1)');
+    let stick1 = dom('.adv__card:nth-child(2)');
+    let stick2 = dom('.adv__card:nth-child(3)');
+    let stick3 = dom('.adv__card:nth-child(4)');
+    let stick4 = dom('.adv__card:nth-child(5)');
+    let stick5 = dom('.content__right');
+    if (window.pageYOffset + 400> stick0.offsetTop) {
         odometer0.innerHTML = 8888;
-        setTimeout(function () {
-            odometer1.innerHTML = 88;
-        }, 200);
-        setTimeout(function () {
-            odometer2.innerHTML = 88;
-        }, 500);
-        setTimeout(function () {
-            odometer3.innerHTML = 88;
-        }, 1000);
-        setTimeout(function () {
-            odometer4.innerHTML = 88;
-        }, 1200);
     }
-    if (top > 2500) {
-        odometer7.innerHTML = 88;
+    if (window.pageYOffset + 400 > stick1.offsetTop) {
+        odometer1.innerHTML = 88;
     }
-}, false);
+    if (window.pageYOffset + 400 > stick2.offsetTop) {
+        odometer2.innerHTML = 88;
+    }
+    if (window.pageYOffset + 400 > stick3.offsetTop) {
+        odometer3.innerHTML = 88;
+    }
+    if (window.pageYOffset + 400 > stick4.offsetTop) {
+        odometer4.innerHTML = 88;
+    }
+    if (window.pageYOffset + 400 > stick5.offsetTop) {
+        odometer5.innerHTML = 88;
+    }
+}
+$('#backToTop').click(function () {
+    $('html,body').animate({
+      scrollTop: 0
+    }, 1000, 'swing');
+    return false;
+  });
