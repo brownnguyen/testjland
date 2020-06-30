@@ -226,7 +226,7 @@ h5 {
             .content__text {
                 text-align: center;
                 position: absolute;
-                top: 40%;
+                top: 30%;
                 left: 50%;
                 transform: translateX(-50%);
                 color: white;
@@ -234,6 +234,9 @@ h5 {
                     font-size: 36px;
                     letter-spacing: 4px;
                     font-family: "Oswald", sans-serif;
+                }
+                .global{
+                    margin-top: 10%;
                 }
                 .title {
                     font-size: 62px;
@@ -257,14 +260,14 @@ h5 {
             }
         }
         .slick-next {
-            top: 60%;
+            top: 50%;
             right: 5%;
             &:before {
                 font-size: 70px;
             }
         }
         .slick-prev {
-            top: 60%;
+            top: 50%;
             left: 5%;
             z-index: 10 !important;
             &:before {
@@ -1590,7 +1593,7 @@ h5 {
         .carousel__slider {
             .carousel__content {
                 .content__text {
-                    top: 30% !important;
+                    top: 36% !important;
                     .translations {
                         font-size: 15px !important;
                         margin-bottom: 0 !important;
@@ -1789,7 +1792,7 @@ h5 {
     .carousel__slider {
         .carousel__content {
             .content__text {
-                top: 40% !important;
+                top: 50% !important;
                 .translations,
                 .content {
                     display: none !important;
