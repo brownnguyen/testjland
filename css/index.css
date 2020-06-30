@@ -370,11 +370,11 @@ h5 {
     .container__all .menu__burger .close__menu {
       cursor: pointer;
       position: absolute;
-      top: 4%;
-      right: 2%;
+      top: 6%;
+      right: 3%;
       color: white;
       z-index: 101;
-      font-size: 20px; }
+      font-size: 30px; }
     .container__all .menu__burger .burger__content {
       text-align: center; }
       .container__all .menu__burger .burger__content .top__title {
@@ -575,16 +575,13 @@ h5 {
     background-image: url("../assets/img/img__boygirl__seeing.jpg"); }
   .container__all .tr-co-st-all {
     width: 100%;
-    height: 520px;
-    position: relative;
     margin: 0 auto;
     margin-top: 10px;
     background-size: cover;
     background-position: center; }
     .container__all .tr-co-st-all .tr-co-st {
-      z-index: 2;
-      position: absolute;
       height: 100%;
+      padding: 4% 0;
       width: 100%;
       margin: 0 auto;
       display: -webkit-box;
@@ -607,12 +604,13 @@ h5 {
         .container__all .tr-co-st-all .tr-co-st .tr-co-st-content .consulting__right,
         .container__all .tr-co-st-all .tr-co-st .tr-co-st-content .staffing__left {
           max-width: 540px;
-          margin-left: 20px; }
+          margin-left: 20px;
+          padding: 2% 0; }
           .container__all .tr-co-st-all .tr-co-st .tr-co-st-content .translation__left span,
           .container__all .tr-co-st-all .tr-co-st .tr-co-st-content .consulting__right span,
           .container__all .tr-co-st-all .tr-co-st .tr-co-st-content .staffing__left span {
             font-size: 58px;
-            margin-top: 14%;
+            display: inline-block;
             font-family: "Oswald", sans-serif; }
           .container__all .tr-co-st-all .tr-co-st .tr-co-st-content .translation__left h3,
           .container__all .tr-co-st-all .tr-co-st .tr-co-st-content .consulting__right h3,
@@ -697,10 +695,6 @@ h5 {
             -ms-transition: all 0.5s;
             -o-transition: all 0.5s; }
     .container__all .tr-co-st-all .tr_co_st__layer {
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
       background-color: rgba(24, 128, 182, 0.871); }
@@ -954,7 +948,7 @@ h5 {
       -webkit-transform: translateX(-25%);
               transform: translateX(-25%); } }
   .container__all .clients {
-    width: 60%;
+    max-width: 936px;
     margin: 0 auto;
     margin-top: 60px;
     text-align: center; }
@@ -1281,7 +1275,10 @@ h5 {
     display: none; }
 
   .advantage .advantage__content {
-    width: 85% !important; } }
+    width: 85% !important; }
+
+  .clients {
+    max-width: 800px !important; } }
 @media screen and (max-width: 1024px) {
   .container__all {
     border: unset !important; }
@@ -1314,14 +1311,15 @@ h5 {
   .advantage__content {
     width: 100% !important; }
 
-  .container__all .tr-co-st-all {
-    height: 480px; }
-    .container__all .tr-co-st-all .tr-co-st .tr-co-st-content {
-      width: 87%; }
+  .container__all .tr-co-st-all .tr-co-st .tr-co-st-content {
+    width: 87%; }
 
   .line__info .line__content .center {
     display: none !important; }
 
+  .menu__burger .close__menu {
+    top: 3% !important;
+    right: 3% !important; }
   .menu__burger .burger__content .title__menu {
     padding-bottom: 5px; }
   .menu__burger .burger__content .burger__ul {
@@ -1344,7 +1342,10 @@ h5 {
     display: none !important; }
 
   .total__solution {
-    padding: 0 !important; } }
+    padding: 0 !important; }
+
+  .clients {
+    width: 478px !important; } }
 @media screen and (max-width: 768px) {
   .container__all .header .header__top {
     height: 60px !important; }
@@ -1492,7 +1493,10 @@ h5 {
 
   .menu__burger .close__menu {
     top: 2% !important;
-    right: 3% !important; } }
+    right: 3% !important; }
+
+  .clients {
+    width: 476px !important; } }
 @media screen and (max-width: 576px) {
   .header .logo {
     padding: 0 10px !important; }
@@ -1551,7 +1555,7 @@ h5 {
     width: 80% !important; }
 
   .clients {
-    width: 80% !important; }
+    width: 320px !important; }
 
   .information {
     width: 90% !important; } }

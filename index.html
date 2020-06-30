@@ -291,64 +291,67 @@
         <!-- ===== End Advantage Component ===== -->
         <!-- ====== Translation Consulting staffing component ====== -->
         <div class="translation__all tr-co-st-all">
-            <div class="translation tr-co-st">
-                <div class="translation__content tr-co-st-content">
-                    <div class="translation__left">
-                        <span>TRANSLATION</span>
-                        <h3>サービス</h3>
-                        <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
-                        <div class="translation__button button__all">
-                            <span>サービスTOPへ</span>
-                            <i class="fa fa-angle-right"></i>
+            <div class="tr_co_st__layer">
+                <div class="translation tr-co-st">
+                    <div class="translation__content tr-co-st-content">
+                        <div class="translation__left">
+                            <span>TRANSLATION</span>
+                            <h3>サービス</h3>
+                            <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+                            <div class="translation__button button__all">
+                                <span>サービスTOPへ</span>
+                                <i class="fa fa-angle-right"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="translation__right">
-                        <div class="layer__blue"></div>
-                        <img src="./assets/img/img__global.jpg" alt="">
+                        <div class="translation__right">
+                            <div class="layer__blue"></div>
+                            <img src="./assets/img/img__global.jpg" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="tr_co_st__layer"></div>
         </div>
         <div class="consulting__all tr-co-st-all">
-            <div class="consulting tr-co-st">
-                <div class="consulting__content  tr-co-st-content">
-                    <div class="consulting__left">
-                        <div class="layer__blue"></div>
-                        <img src="./assets/img/img_cat.jpg" alt="">
-                    </div>
-                    <div class="consulting__right">
-                        <span>CONSULTING</span>
-                        <h3>サービス</h3>
-                        <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
-                        <div class="consulting__button button__all">
-                            <span>サービスTOPへ</span>
-                            <i class="fa fa-angle-right"></i>
+            <div class="tr_co_st__layer">
+                <div class="consulting tr-co-st">
+                    <div class="consulting__content  tr-co-st-content">
+                        <div class="consulting__left">
+                            <div class="layer__blue"></div>
+                            <img src="./assets/img/img_cat.jpg" alt="">
+                        </div>
+                        <div class="consulting__right">
+                            <span>CONSULTING</span>
+                            <h3>サービス</h3>
+                            <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+                            <div class="consulting__button button__all">
+                                <span>サービスTOPへ</span>
+                                <i class="fa fa-angle-right"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="tr_co_st__layer"></div>
         </div>
         <div class="staffing__all tr-co-st-all">
-            <div class="staffing tr-co-st">
-                <div class="staffing__content  tr-co-st-content">
-                    <div class="staffing__left">
-                        <span>STAFFING</span>
-                        <h3>サービス</h3>
-                        <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
-                        <div class="staffing__button button__all">
-                            <span>サービスTOPへ</span>
-                            <i class="fa fa-angle-right"></i>
+            <div class="tr_co_st__layer">
+                <div class="staffing tr-co-st">
+                    <div class="staffing__content  tr-co-st-content">
+                        <div class="staffing__left">
+                            <span>STAFFING</span>
+                            <h3>サービス</h3>
+                            <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+                            <div class="staffing__button button__all">
+                                <span>サービスTOPへ</span>
+                                <i class="fa fa-angle-right"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="staffing__right">
-                        <div class="layer__blue"></div>
-                        <img src="./assets/img/img__boygirl__seeing.jpg" alt="">
+                        <div class="staffing__right">
+                            <div class="layer__blue"></div>
+                            <img src="./assets/img/img__boygirl__seeing.jpg" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="tr_co_st__layer"></div>
         </div>
         <!-- ======== End translation consulting staffing component ======== -->
         <!-- ======== Total solution component ======== -->
@@ -646,17 +649,27 @@
                     {
                         breakpoint: 1024,
                         settings: {
+                            slidesToShow: 5,
+                            slidesToScroll: 1,
+                            infinite: true,
+                        }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
                             slidesToShow: 3,
                             slidesToScroll: 1,
                             infinite: true,
                         }
                     },
                     {
-                        breakpoint: 600,
+                        breakpoint: 576,
                         settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 1
-                        }
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            arrows: false
+                        },
+                        
                     }
                 ]
             });
