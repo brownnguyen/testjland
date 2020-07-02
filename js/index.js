@@ -29,7 +29,6 @@ window.onscroll = function () {
     let stick2 = dom('.adv__card:nth-child(3)');
     let stick3 = dom('.adv__card:nth-child(4)');
     let stick4 = dom('.adv__card:nth-child(5)');
-    let stick5 = dom('.content__right');
     if (window.pageYOffset + 400 > stick0.offsetTop) {
         odometer0.innerHTML = 8888;
     }
@@ -44,9 +43,6 @@ window.onscroll = function () {
     }
     if (window.pageYOffset + 400 > stick4.offsetTop) {
         odometer4.innerHTML = 88;
-    }
-    if (window.pageYOffset + 400 > stick5.offsetTop) {
-        odometer5.innerHTML = 88;
     }
 }
 $('#backToTop').click(function () {

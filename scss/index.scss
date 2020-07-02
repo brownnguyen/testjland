@@ -734,7 +734,7 @@ h5 {
                         cursor: pointer;
                         margin-top: 6%;
                         width: 60%;
-                        height: 13%;
+                        height: 15%;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
@@ -805,6 +805,13 @@ h5 {
                     p {
                         line-height: 25px;
                     }
+                    .translation__left,
+                .consulting__right,
+                .staffing__left{
+                    .button__all{
+                        padding-top: 4px;
+                    }
+                }
                 }
             }
         }
@@ -813,20 +820,21 @@ h5 {
         width: 100%;
         background-color: #ddecf4;
         margin: auto;
-        padding: 30px 0;
+        padding: 30px 20px;
         .total__div {
             display: flex;
             align-items: center;
             margin: auto 0;
             .total__solution__content {
-                width: 90%;
+                max-width: 1120px;
+                width: 100%;
                 padding: 4% 0;
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
                 margin: auto;
                 .content__left {
-                    width: 510px;
+                    width: 48%;
                     display: flex;
                     align-items: center;
                     .left {
@@ -855,16 +863,16 @@ h5 {
                     }
                 }
                 .content__right {
-                    max-width: 540px;
-                    width: 100%;
+                    width: 48%;
                     height: 100%;
                     .content__circle {
                         display: flex;
+                        padding: 20px 0;
                         justify-content: center;
                         align-items: center;
                         margin: auto;
                         width: 100%;
-                        min-height: 300px;
+                        min-height: 230px;
                         position: relative;
                         img {
                             width: 100%;
@@ -998,16 +1006,16 @@ h5 {
             margin: auto;
             .left {
                 font-weight: bold;
+                width: 100px;
             }
             .center {
                 overflow: hidden;
                 font-size: 14px;
-                text-align: center;
-                width: 70%;
+                width: 90%;
             }
             .right {
                 cursor: pointer;
-                width: 110px;
+                width: 100px;
                 display: flex;
                 justify-content: space-around;
                 color: $blue;
@@ -1019,8 +1027,6 @@ h5 {
                 }
                 &:hover {
                     transform: translate(5%, 0);
-                    color: white;
-                    border-radius: 2px;
                 }
             }
         }
@@ -1390,9 +1396,6 @@ h5 {
             display: none !important;
         }
     }
-    .total__solution {
-        padding: 0 !important;
-    }
     .clients {
         width: 478px !important;
     }
@@ -1620,18 +1623,18 @@ h5 {
         .carousel__content {
             .content__text {
                 top: 40% !important;
-                width: 60%!important;
-                .translations{
-                    font-size: 12px!important;
+                width: 60% !important;
+                .translations {
+                    font-size: 12px !important;
                 }
-                .global{
-                    margin-top: 0!important;
+                .global {
+                    margin-top: 0 !important;
                 }
-                .title{
-                    font-size: 16px!important;
+                .title {
+                    font-size: 16px !important;
                 }
-                .content{
-                    display: none!important;
+                .content {
+                    display: none !important;
                 }
             }
         }
@@ -1705,8 +1708,18 @@ h5 {
             width: 80% !important;
         }
     }
-    .clients {
-        width: 160px !important;
+    .container__all {
+        .clients {
+            width: 160px !important;
+            .clients__slick {
+                .slick-next {
+                    right: -15% !important;
+                }
+                .slick-prev {
+                    left: -15% !important;
+                }
+            }
+        }
     }
     .information {
         width: 90% !important;
