@@ -20,7 +20,7 @@ body {
     top: 0;
     left: 50%;
     z-index: 900;
-    max-width: 1560px;
+    max-width: 1520px;
     transform: translateX(-50%);
     box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
         0px 1px 5px 0px rgba(0, 0, 0, 0.12);
@@ -37,6 +37,7 @@ a {
     color: white;
     text-decoration: none;
 }
+
 p,
 h1,
 h2,
@@ -390,6 +391,7 @@ h5 {
                     text-align: center;
                     .icon {
                         cursor: pointer;
+                        overflow: hidden;
                         background-color: white;
                         line-height: 100px;
                         text-align: center;
@@ -752,6 +754,9 @@ h5 {
                             font-size: 16px;
                             letter-spacing: 2px;
                         }
+                        i {
+                            font-weight: bold;
+                        }
                         &:hover {
                             background-color: $dark-blue !important;
                             transform: translate(5%, 0);
@@ -806,12 +811,12 @@ h5 {
                         line-height: 25px;
                     }
                     .translation__left,
-                .consulting__right,
-                .staffing__left{
-                    .button__all{
-                        padding-top: 4px;
+                    .consulting__right,
+                    .staffing__left {
+                        .button__all {
+                            padding-top: 4px;
+                        }
                     }
-                }
                 }
             }
         }
@@ -846,7 +851,7 @@ h5 {
                             font-family: "Oswald", sans-serif;
                         }
                         h2 {
-                            font-size: 26px;
+                            font-size: 25px;
                             font-weight: bold;
                             margin-bottom: 10%;
                         }
@@ -976,13 +981,14 @@ h5 {
         margin: 60px auto;
         .information__content {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             .info__item {
-                margin: 0 10px;
+                margin: 5px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 360px;
+                width: 30%;
                 height: 75px;
                 background-color: #b4b4b4;
                 p {
@@ -993,37 +999,40 @@ h5 {
         }
     }
     .line__info {
-        height: 60px;
+        padding: 16px 0;
         border-top: 1px solid #cccccc;
         border-bottom: 1px solid #cccccc;
         display: flex;
         align-items: center;
         .line__content {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            width: 68%;
+            width: 70%;
             margin: auto;
             .left {
                 font-weight: bold;
-                width: 100px;
+                width: 15%;
             }
             .center {
                 overflow: hidden;
                 font-size: 14px;
-                width: 90%;
+                width: 70%;
             }
             .right {
                 cursor: pointer;
-                width: 100px;
+                width: 14%;
                 display: flex;
-                justify-content: space-around;
+                justify-content: flex-start;
                 color: $blue;
                 font-weight: bold;
                 font-size: 14px;
                 transition: all 0.5s;
                 .right__icon {
                     margin: auto 0;
+                    margin-right: 5%;
+                    font-size: 14px;
                 }
                 &:hover {
                     transform: translate(5%, 0);
@@ -1035,6 +1044,12 @@ h5 {
         .line__content {
             .right {
                 padding: 5px 2px;
+            }
+            .left{
+                width: 10%!important;
+            }
+            .center{
+                width: 70%!important;
             }
         }
     }
@@ -1080,6 +1095,7 @@ h5 {
                         font-size: 14px;
                     }
                     .button__end {
+                        display: inline-block;
                         cursor: pointer;
                         margin-top: 10px;
                         width: 98%;
@@ -1091,34 +1107,59 @@ h5 {
                         -ms-border-radius: 0;
                         -o-border-radius: 0;
                         border-color: transparent;
-                        color: white;
+
                         font-size: 16px;
                         transition: all 0.5s;
-
                         &:hover {
                             transform: translate(5%, 0);
-                            background-color: $dark-blue;
+                            background-color: white;
+                            border: 2px solid $blue;
+                            a {
+                                color: $blue;
+                            }
                         }
                         &:focus {
                             outline: none;
                         }
+                        a {
+                            color: white;
+                        }
                     }
                 }
-                .ul__main {
-                    width: 100%;
-                    padding-right: 20px;
-                    margin-top: 60px;
-                    h4 {
-                        border-bottom: 2px solid $blue;
-                        padding-bottom: 10px;
-                        color: $blue;
-                    }
-                    ul {
-                        list-style: none;
-                        padding-left: 0;
-                        li {
-                            font-size: 14px;
-                            padding: 5px 0;
+            }
+        }
+        .contact__bottom{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .ul__main {
+                width: 25%;
+                padding-right: 20px;
+                margin-top: 60px;
+                h4 {
+                    border-bottom: 2px solid $blue;
+                    padding-bottom: 10px;
+                    color: $blue;
+                }
+                ul {
+                    list-style: none;
+                    padding-left: 0;
+                    li {
+                        cursor: pointer;
+                        font-size: 14px;
+                        padding: 5px 0;
+                        transition: all 0.5s;
+
+                        -webkit-transition: all 0.5s;
+                        -moz-transition: all 0.5s;
+                        -ms-transition: all 0.5s;
+                        -o-transition: all 0.5s;
+                        a {
+                            color: black;
+                        }
+                        &:hover {
+                            transform: translate(5%, 0);
+                            opacity: 0.8;
                         }
                     }
                 }
@@ -1162,6 +1203,7 @@ h5 {
             -ms-flex-align: center;
             .line__bottom__content {
                 margin: auto 10px;
+                font-size: 14px;
             }
         }
     }
@@ -1169,7 +1211,7 @@ h5 {
         .line__info__bottom {
             .bottom__info {
                 .line__bottom__content {
-                    font-size: 16px;
+                    font-size: 14px;
                 }
             }
         }
@@ -1199,7 +1241,7 @@ h5 {
                     display: inline-block;
                     width: 30px;
                     height: 30px;
-                    line-height: 30px;
+                    line-height: 32px;
                     text-align: center;
                     color: white;
                     border-radius: 50%;
@@ -1211,6 +1253,7 @@ h5 {
                 }
                 .face__note {
                     font-size: 12px;
+                    font-weight: bold;
                 }
             }
         }
@@ -1340,13 +1383,6 @@ h5 {
             }
         }
     }
-    .line__info {
-        .line__content {
-            .center {
-                display: none !important;
-            }
-        }
-    }
     .menu__burger {
         .close__menu {
             top: 3% !important;
@@ -1398,6 +1434,11 @@ h5 {
     }
     .clients {
         width: 478px !important;
+    }
+    .line__info {
+        .line__content {
+            width: 95% !important;
+        }
     }
 }
 @media screen and (max-width: 768px) {
@@ -1497,8 +1538,8 @@ h5 {
                     margin: 0 auto !important;
                     h3 {
                         font-size: 20px !important;
-                        margin-top: 10px !important;
                         margin: 0 auto !important;
+                        margin-bottom: 10px !important;
                     }
                     span {
                         margin-top: 15px !important;
@@ -1515,7 +1556,7 @@ h5 {
                     .button__all {
                         margin-top: 40px;
                         width: 100% !important;
-                        height: 40px !important;
+                        height: 45px !important;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
@@ -1533,6 +1574,7 @@ h5 {
                 .staffing__right {
                     width: 100% !important;
                     margin: 20px auto !important;
+                    margin-bottom: 0 !important;
                 }
             }
         }
@@ -1548,6 +1590,7 @@ h5 {
                         }
                         .p__content {
                             font-size: 14px !important;
+                            margin-top: 20px !important;
                         }
                         span {
                             display: inline-block !important;
@@ -1600,6 +1643,19 @@ h5 {
     }
     .clients {
         width: 476px !important;
+    }
+    .line__info {
+        .line__content {
+            .left {
+                width: 17% !important;
+            }
+            .center {
+                width: 62% !important;
+            }
+            .right {
+                width: 18% !important;
+            }
+        }
     }
 }
 
@@ -1661,15 +1717,28 @@ h5 {
         }
         .button__adv {
             .main__button {
-                width: 60% !important;
+                width: 75% !important;
+                height: 45px!important;
             }
         }
     }
     .contact {
         .contact__top {
             display: block !important;
+            .contact__content{
+                span{
+                    padding: 8px 25px!important;
+                }
+            }
+            .contact__main{
+                padding-right: 0!important;
+            }
+        }
+        .contact__bottom{
             .ul__main {
+                width: 100%!important;
                 margin-top: 0 !important;
+                padding-right: 0!important;
             }
         }
     }
@@ -1703,11 +1772,7 @@ h5 {
             }
         }
     }
-    .line__info {
-        .line__content {
-            width: 80% !important;
-        }
-    }
+
     .container__all {
         .clients {
             width: 160px !important;
@@ -1722,6 +1787,26 @@ h5 {
         }
     }
     .information {
-        width: 90% !important;
+        width: 96% !important;
+        .information__content {
+            .info__item {
+                width: 100% !important;
+            }
+        }
+    }
+    .line__info {
+        .line__content {
+            .left,
+            .center,
+            .right {
+                width: 90% !important;
+            }
+            .right {
+                justify-content: flex-start!important;
+            }
+            .center{
+                padding: 10px 0 !important;
+            }
+        }
     }
 }
